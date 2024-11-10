@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, Logo } from "../index";
+import { Container } from "../index";
 import { Link } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-function Header() {
+const Header = () => {
   const authStatus = false;
   //   const authStatus = useSelector((state) => {
   //     return state?.auth?.status || false;
@@ -40,14 +40,16 @@ function Header() {
   ];
 
   return (
-    <header className="py-3 shadow bg ">
+    <header className="py-1 shadow bg-[#E5E6E1]">
       <Container>
         <nav className="flex">
-          <div className="mr-4">
-            {/* <Link to="/"> */}
-            <Logo width="70px" />
-            {/* </Link> */}
+          <div className="mr-4 flex items-center text-3xl">
+            Quiz
+            {/* <Link to="/">
+            <Logo width="60px" />
+            </Link> */}
           </div>
+
           <ul className="flex ml-auto">
             {navItems.map((item) =>
               item.active ? (
@@ -56,7 +58,7 @@ function Header() {
                     onClick={() => {
                       //   navigate(item.slug);
                     }}
-                    className="inline-bock px-6 py-2 duration-200 rounded-full"
+                    className="inline-bock px-6 py-2 duration-200 hover:underline"
                   >
                     {item.name}
                   </button>
@@ -73,6 +75,6 @@ function Header() {
       </Container>
     </header>
   );
-}
+};
 
 export default Header;
