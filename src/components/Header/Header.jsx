@@ -2,6 +2,8 @@ import React from "react";
 import { Container } from "../index";
 import { Link } from "react-router-dom";
 // import { useSelector } from "react-redux";
+import logo from "../../assets/logoipsum-280.svg";
+
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -44,7 +46,7 @@ const Header = () => {
       <Container>
         <nav className="flex">
           <div className="mr-4 flex items-center text-3xl">
-            Quiz
+            <img src={logo} alt="" />
             {/* <Link to="/">
             <Logo width="60px" />
             </Link> */}
