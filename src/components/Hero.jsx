@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from ".";
 import { Button } from "./ui/button";
 
 const Hero = () => {
