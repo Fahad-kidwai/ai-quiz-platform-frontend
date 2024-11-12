@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import { Footer, Header } from "./components";
+import { Footer, Header, Step1, Step2, Step3 } from "./components";
 import Hero from "./components/Hero";
 
 function App() {
@@ -13,6 +13,9 @@ function App() {
         <Header />
         <main className="">
           <Hero />
+          <Step1 />
+          <Step2 />
+          <Step3 />
           <Outlet />
         </main>
         <Footer />
