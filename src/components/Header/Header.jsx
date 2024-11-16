@@ -56,14 +56,11 @@ const Header = () => {
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
-                  <button
-                    onClick={() => {
-                      //   navigate(item.slug);
-                    }}
-                    className="inline-bock px-6 py-2 duration-200 hover:underline"
-                  >
-                    {item.name}
-                  </button>
+                  <Link to={item.slug}>
+                    <button className="inline-bock px-6 py-2 duration-200 hover:underline">
+                      {item.name}
+                    </button>
+                  </Link>
                 </li>
               ) : null
             )}
